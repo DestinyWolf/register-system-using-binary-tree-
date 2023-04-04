@@ -1,4 +1,4 @@
-include <stdlib.h> // biblioteca de gerenciamento de memoria
+#include <stdlib.h> // biblioteca de gerenciamento de memoria
 #include <stdio.h> //biblioteca de funções de entrada e saida basicas do C
 #include <conio.h>
 #include "tree.h" //biblioteca da TAD
