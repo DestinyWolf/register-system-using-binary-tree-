@@ -16,7 +16,8 @@ typedef struct typedata{
 //criação do registro da arvore
 typedef struct tree{
     typedata data; //campo destinado a guardar os dados do registro data
-
+	
+	int bal;
     struct tree *l; //galho a esquerda
     struct tree *r;//galho a direita
     struct tree *parent; // galho pai 
@@ -54,4 +55,4 @@ tree * left_leaf(tree * root);
 /// @param root 
 void * rotate(tree * root/*arguemtos*/);
 
-#endif //PILHA_H_INCLUDED
+#endif //TREE_H_INCLUDED
