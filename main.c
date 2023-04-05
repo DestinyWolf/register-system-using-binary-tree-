@@ -7,7 +7,7 @@
 void main(){
 	tree *root = (tree*) malloc(sizeof(tree)); //criação da raiz da arvore
 	
-	menu(&tree); //chamada do menu
+	menu(&root); //chamada do menu
 	
 }
 
@@ -26,7 +26,7 @@ void menu(tree**root){
 		case 2: buscar(root); //chamada da função de busca
 			break;
 		case 3: remover(root); // chamada da função de remoção
-			break
+			break;
 		default: print("Opcao indisponivel\n"); // caso não seja nenhuma das anteriores o programa retorna para o menu;
 			menu(root);
 			break;

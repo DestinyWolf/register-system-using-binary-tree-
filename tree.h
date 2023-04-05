@@ -21,7 +21,7 @@ typedef struct tree{
     struct tree *l; //galho a esquerda
     struct tree *r;//galho a direita
     struct tree *parent; // galho pai 
-};
+}tree;
 
 /// @brief busca e retorna, a partir de uma chave, o galho/ folha deseja, busca ocorre de maneira recursiva
 /// @param root 
@@ -51,8 +51,15 @@ tree * right_leaf(tree * root);
 /// @return  folha mais a esquerda do lado direito
 tree * left_leaf(tree * root);
 
+void for_left(tree**root);
+
+void for_right(tree**root);
+
+void balancing_factor(tree**root);
+
 /// @brief faz o rotacionamento da arvore e de subarvores
 /// @param root 
 void * rotate(tree * root/*arguemtos*/);
+
 
 #endif //TREE_H_INCLUDED
