@@ -55,11 +55,14 @@ void for_left(tree**root);
 
 void for_right(tree**root);
 
-void balancing_factor(tree**root);
+void balancing_factor(tree**root, char sign);
 
 /// @brief faz o rotacionamento da arvore e de subarvores
 /// @param root 
-void * rotate(tree * root/*arguemtos*/);
+void rotate(tree ** root);
 
+void rotate_left(tree**root);
+
+void rotate_right(tree**root);
 
 #endif //TREE_H_INCLUDED
