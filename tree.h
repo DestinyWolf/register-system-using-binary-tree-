@@ -4,16 +4,16 @@
 #define true 1;
 #define false 0;
 
-//criação do registro dos dados dos usuarios
+//cria��o do registro dos dados dos usuarios
 typedef struct typedata{
     int cpf; //cpf 14 caracterss
     char nome[64]; // nome 
     int dia, mes, ano; // data de nascimento
     int numero, ddd; //numero de telefone e ddd
 
-}typedata; // definição do "apelido" do registro
+}typedata; // defini��o do "apelido" do registro
 
-//criação do registro da arvore
+//criaçãoo do registro da arvore
 typedef struct tree{
     typedata data; //campo destinado a guardar os dados do registro data
 	
@@ -32,37 +32,30 @@ tree * search(tree * root, int id);
 /// @brief adiciona uma nova folha a arvore binaria
 /// @param root 
 /// @param data 
-/// @return true ou false, dependendo se a operação foi realizada ou não
+/// @return true ou false, dependendo se a opera��o foi realizada ou n�o
 int insert(tree ** root, typedata data);
 
 /// @brief remove uma folha ou um galho da arvore binaria
 /// @param root 
 /// @param id
-/// @return true ou false, dependendo se a operação foi realizada ou não
+/// @return true ou false, dependendo se a opera��o foi realizada ou n�o
 int remove(tree ** root, int id);
 
-/// @brief encontra e retorna a folha mais a direita do lado esquerdo
+
+/// @brief atualiza o fator de balanceamento e chama a função de rotação
 /// @param root 
-/// @return  folha mais a direita do lado esquerdo
-tree * right_leaf(tree * root);
-
-/// @brief encontra e retorna a folha mais a esquerda do lado direito
-/// @param root 
-/// @return  folha mais a esquerda do lado direito
-tree * left_leaf(tree * root);
-
-void for_left(tree**root);
-
-void for_right(tree**root);
-
 void balancing_factor(tree**root, char sign);
 
 /// @brief faz o rotacionamento da arvore e de subarvores
 /// @param root 
 void rotate(tree ** root);
 
+/// @brief faz o rotacionamento para a esquerda
+/// @param root 
 void rotate_left(tree**root);
 
+/// @brief faz o rotacionamento para a direita
+/// @param root 
 void rotate_right(tree**root);
 
 #endif //TREE_H_INCLUDED
